@@ -12,10 +12,11 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
-
+    var hashiCentral: HashiCentral!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+        hashiCentral = HashiCentral()
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
