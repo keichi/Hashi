@@ -13,6 +13,8 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Hashi" customModuleProvider="target">
             <connections>
+                <outlet property="btnRecord" destination="Jec-iH-4A2" id="zPO-yZ-IjD"/>
+                <outlet property="btnStop" destination="BRg-l7-6Ku" id="uQG-vN-utP"/>
                 <outlet property="lblAccX" destination="Sqd-OF-pzN" id="OsD-pl-kDu"/>
                 <outlet property="lblAccY" destination="KHg-E0-amL" id="fRj-U4-CRG"/>
                 <outlet property="lblAccZ" destination="1vh-B9-x4V" id="FwT-Ko-TlA"/>
@@ -679,7 +681,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="383" height="250"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <value key="minSize" type="size" width="383" height="250"/>
             <value key="maxSize" type="size" width="383" height="250"/>
             <view key="contentView" id="EiT-Mj-1SZ">
@@ -796,7 +798,7 @@
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BRg-l7-6Ku">
                         <rect key="frame" x="306" y="13" width="70" height="32"/>
-                        <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kl4-Vz-PZh">
+                        <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kl4-Vz-PZh">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>

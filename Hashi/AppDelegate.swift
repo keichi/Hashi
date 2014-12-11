@@ -25,6 +25,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, HashiCentralDelegate {
     @IBOutlet weak var lblSampleCount: NSTextField!
     @IBOutlet weak var txtOutputPath: NSTextField!
     
+    @IBOutlet weak var btnRecord: NSButton!
+    @IBOutlet weak var btnStop: NSButton!
+    
     var hashiCentral: HashiCentral!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
@@ -64,12 +67,29 @@ class AppDelegate: NSObject, NSApplicationDelegate, HashiCentralDelegate {
     }
     
     @IBAction func btnRecordPressed(sender: NSButton) {
+        btnRecord.enabled = false
+        btnStop.enabled = true
     }
     
     @IBAction func btnStopPressed(sender: NSButton) {
+        btnRecord.enabled = true
+        btnStop.enabled = false
     }
     
     @IBAction func btnSelectOutputPressed(sender: NSButton) {
+        let dialog = NSOpenPanel()
+        dialog.canChooseDirectories = true
+        dialog.canChooseFiles = false
+        dialog.canCreateDirectories = true
+        dialog.allowsMultipleSelection = false
+        dialog.worksWhenModal = true
+        dialog.prompt = "Select"
+        
+        if (dialog.runModal() == NSOKButton) {
+            if let url = dialog.directoryURL {
+                txtOutputPath.stringValue = url.path!
+            }
+        }
     }
 }
 
