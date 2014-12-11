@@ -11,7 +11,6 @@ import CoreBluetooth
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, HashiCentralDelegate {
-
     @IBOutlet weak var window: NSWindow!
     
     @IBOutlet weak var lblAccX: NSTextField!
@@ -23,6 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, HashiCentralDelegate {
     @IBOutlet weak var lblRotZ: NSTextField!
     
     @IBOutlet weak var lblConnectionStatus: NSTextField!
+    @IBOutlet weak var lblSampleCount: NSTextField!
+    @IBOutlet weak var txtOutputPath: NSTextField!
     
     var hashiCentral: HashiCentral!
 
@@ -51,15 +52,24 @@ class AppDelegate: NSObject, NSApplicationDelegate, HashiCentralDelegate {
     }
     
     func didUpdateAcceleration(accX: Float, accY: Float, accZ: Float) {
-        lblAccX.stringValue = formatFloatValue(accX)
-        lblAccY.stringValue = formatFloatValue(accY)
-        lblAccZ.stringValue = formatFloatValue(accZ)
+        lblAccX.stringValue = NSString(format: "%.3f g", accX)
+        lblAccY.stringValue = NSString(format: "%.3f g", accY)
+        lblAccZ.stringValue = NSString(format: "%.3f g", accZ)
     }
     
     func didUpdateRotationRate(rotX: Float, rotY: Float, rotZ: Float) {
-        lblRotX.stringValue = formatFloatValue(rotX)
-        lblRotY.stringValue = formatFloatValue(rotY)
-        lblRotZ.stringValue = formatFloatValue(rotZ)
+        lblRotX.stringValue = NSString(format: "%.3f deg/s", rotX)
+        lblRotY.stringValue = NSString(format: "%.3f deg/s", rotY)
+        lblRotZ.stringValue = NSString(format: "%.3f deg/s", rotZ)
+    }
+    
+    @IBAction func btnRecordPressed(sender: NSButton) {
+    }
+    
+    @IBAction func btnStopPressed(sender: NSButton) {
+    }
+    
+    @IBAction func btnSelectOutputPressed(sender: NSButton) {
     }
 }
 
