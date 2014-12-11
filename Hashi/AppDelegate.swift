@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, HashiCentralDelegate {
         println("Connected to: \(peripheral.name)")
     }
     
-    func didDisconnectFromPeripheral(peripheral: CBPeripheral, error: NSError) {
+    func didDisconnectFromPeripheral(peripheral: CBPeripheral, error: NSError!) {
         println("Disconnected from: \(peripheral.name)")
     }
     

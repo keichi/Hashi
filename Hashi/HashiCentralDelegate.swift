@@ -11,7 +11,7 @@ import CoreBluetooth
 
 protocol HashiCentralDelegate : class {
     func didConnectToPeripheral(peripheral: CBPeripheral, error: NSError!)
-    func didDisconnectFromPeripheral(peripheral: CBPeripheral, error: NSError)
+    func didDisconnectFromPeripheral(peripheral: CBPeripheral, error: NSError!)
     func didUpdateAcceleration(accX: Float, accY: Float, accZ: Float)
     func didUpdateRotationRate(rotX: Float, rotY: Float, rotZ: Float)
 }
