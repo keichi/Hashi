@@ -115,10 +115,10 @@ class HashiCentral : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     }
     
     private func getInt16FromRaw(data: NSData, offset: Int) -> Int16 {
-        var num = NSNumber(short: 0)
-        data.getBytes(&num, range: NSRange(location: offset, length: 2))
+        var val: Int16 = 0
+        data.getBytes(&val, range: NSRange(location: offset, length: 2))
         
-        return num.shortValue
+        return val
     }
     
     private func getAccelerationFromRaw(data: NSData) -> (Float, Float, Float) {
