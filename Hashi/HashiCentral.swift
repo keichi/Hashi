@@ -116,7 +116,13 @@ class HashiCentral : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     private func getInt16FromRaw(data: NSData, offset: Int) -> Int16 {
         var val: Int16 = 0
-        data.getBytes(&val, range: NSRange(location: offset, length: 2))
+        var val2: Int16 = 0
+        
+        data.getBytes(&val, range: NSRange(location: offset, length: 1))
+        data.getBytes(&val2, range: NSRange(location: offset+1, length: 1))
+        
+        val = val << 8
+        val = val + val2
         
         return val
     }
