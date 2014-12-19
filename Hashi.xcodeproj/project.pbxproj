@@ -14,6 +14,7 @@
 		CB62F52A1A329B0F007A6B1D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB62F5291A329B0F007A6B1D /* CoreBluetooth.framework */; };
 		CB62F52C1A329BF7007A6B1D /* HashiCentral.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB62F52B1A329BF7007A6B1D /* HashiCentral.swift */; };
 		CB7329F81A398F280054C695 /* HashiCentralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7329F71A398F280054C695 /* HashiCentralDelegate.swift */; };
+		CB9D9C701A43F87B002C1C57 /* MotionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9D9C6F1A43F87B002C1C57 /* MotionRecorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		CB62F5291A329B0F007A6B1D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		CB62F52B1A329BF7007A6B1D /* HashiCentral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashiCentral.swift; sourceTree = "<group>"; };
 		CB7329F71A398F280054C695 /* HashiCentralDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashiCentralDelegate.swift; sourceTree = "<group>"; };
+		CB9D9C6F1A43F87B002C1C57 /* MotionRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionRecorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		CB62F50B1A329A84007A6B1D /* Hashi */ = {
 			isa = PBXGroup;
 			children = (
+				CB9D9C6F1A43F87B002C1C57 /* MotionRecorder.swift */,
 				CB62F50E1A329A84007A6B1D /* AppDelegate.swift */,
 				CB62F5101A329A84007A6B1D /* Images.xcassets */,
 				CB62F5121A329A84007A6B1D /* MainMenu.xib */,
@@ -218,6 +221,7 @@
 				CB7329F81A398F280054C695 /* HashiCentralDelegate.swift in Sources */,
 				CB62F50F1A329A84007A6B1D /* AppDelegate.swift in Sources */,
 				CB62F52C1A329BF7007A6B1D /* HashiCentral.swift in Sources */,
+				CB9D9C701A43F87B002C1C57 /* MotionRecorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
