@@ -34,6 +34,7 @@ class HashiCentral : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     func centralManager(central: CBCentralManager!, didDisconnectPeripheral peripheral: CBPeripheral!, error: NSError!) {
         delegate?.didDisconnectFromPeripheral(peripheral, error: error)
+        centralManager.scanForPeripheralsWithServices([hashiServiceUUID], options: nil)
     }
     
     func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
